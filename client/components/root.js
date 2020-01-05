@@ -1,18 +1,18 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
-
-const date = new Date()
-const time = date.toLocaleTimeString()
+import WeatherData from './weatherdata'
 
 const Root = () => {
   return (
     <div id="head">
       <nav>
-        <span>FullTrack</span>
-        <div id="desc">{time}</div>
+        <span className="faster">FullTrack</span>
+        <div>
+          <WeatherData />
+        </div>
       </nav>
       <main>
-        <h1>
+        <h1 className="faster">
           Welcome to <span>FullTrack!</span>
         </h1>
         <div id="desc">

@@ -44,13 +44,11 @@ h1 {
   font-size: 4em;
   text-shadow: -1px -1px 0 purple, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  font-family: 'Faster One', cursive;
   padding-left: 10px;
 }
 
 span {
   color: red;
-  font-family: 'Faster One', cursive;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
@@ -58,4 +56,19 @@ span {
 #desc {
   text-shadow: -2px -2px 0 purple, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  padding-left: 5px;
+}
+
+.weatherData {
+  font-family: 'Bungee Inline', cursive;
+  color: white;
+  text-shadow: -2px -2px 0 purple, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  padding-left: 5px;
+  padding-top: 7px;
+  font-size: 1em;
+}
+
+.faster {
+  font-family: 'Faster One', cursive;
 }
