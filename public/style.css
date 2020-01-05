@@ -1,29 +1,61 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Bungee Shade', cursive;
+  background-image: url('https://fsmedia.imgix.net/11/d4/a6/ca/f7cf/4f8e/89b5/230b3e9cc5d5/transitfuturesystemmaplarge-1jpg.jpeg?auto=format%2Ccompress&dpr=2&w=650');
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 a {
   text-decoration: none;
 }
 
-label {
-  display: block;
+nav {
+  display: inline-flex;
+  justify-content: space-between;
 }
 
-nav a {
-  display: inline-block;
-  margin: 1em;
+nav span {
+  font-size: 1.5em;
 }
 
-form div {
-  margin: 1em;
-  display: inline-block;
+nav div {
+  padding-left: 10px;
+  padding-top: 8px;
 }
 
 .brown {
-  background-color: brown;
+  background-color: rgb(63, 16, 16);
+  opacity: 0.5;
+  color: white;
+  margin: 2px;
+  padding-left: 5px;
 }
 
 .purple {
   background-color: purple;
+}
+
+#head {
+  font-family: 'Bungee Inline', cursive;
+}
+
+h1 {
+  font-size: 4em;
+  text-shadow: -1px -1px 0 purple, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-family: 'Faster One', cursive;
+  padding-left: 10px;
+}
+
+span {
+  color: red;
+  font-family: 'Faster One', cursive;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#desc {
+  text-shadow: -2px -2px 0 purple, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }

@@ -8,11 +8,8 @@ class AllTrains extends React.Component {
   }
   render() {
     const trains = this.props.trains
-    console.log('inside my AllTrains component', trains)
-    console.log('new Date', typeof new Date().toLocaleTimeString('en-GB'))
     const date = new Date()
     const minutes = date.getMinutes()
-    console.log('minutes', typeof minutes)
     if (trains.length === 0) {
       return <h1>Loading...</h1>
     }
@@ -20,7 +17,7 @@ class AllTrains extends React.Component {
       <div>
         {trains.ctatt.eta.map((train, index) => (
           <div key={index} className={train.rt === 'p' ? 'purple' : 'brown'}>
-            <h2>{train.rt}</h2>
+            <h2>{train.rt === 'p' ? 'Purple Line' : 'Brown Line'}</h2>
 
             <h2>{train.destNm}</h2>
             <h3>
