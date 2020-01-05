@@ -4,8 +4,10 @@ import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import trainsReducer from './allTrains'
 import weatherReducer from './weatherData'
+import redTrainsReducer from './redTrains'
 
 const reducer = combineReducers({
+  redTrains: redTrainsReducer,
   trains: trainsReducer,
   weatherData: weatherReducer
 })

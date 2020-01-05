@@ -11,16 +11,18 @@ class WeatherData extends React.Component {
   }
   render() {
     const weather = this.props.weatherData
-    console.log(weather)
     if (!weather.weather) {
       return <React.Fragment>Loading...</React.Fragment>
     } else {
       const temp = weather.main.temp
       return (
         <React.Fragment>
-          <span className="weatherData">{time}</span>
-          <span className="weatherData">{weather.weather[0].description}</span>
-          <span className="weatherData">{Math.floor(temp)} °</span>
+          <span className="weatherData"> {time} </span>
+          <span className="weatherData">
+            {' '}
+            {weather.weather[0].description}{' '}
+          </span>
+          <span className="weatherData"> {Math.floor(temp)} ° </span>
         </React.Fragment>
       )
     }

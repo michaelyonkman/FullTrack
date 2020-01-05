@@ -1,14 +1,14 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchTrains} from '../store/allTrains'
+import {fetchRedTrains} from '../store/redTrains'
 
-class AllTrains extends React.Component {
+class RedTrains extends React.Component {
   componentDidMount() {
-    console.log('IN COMPONENT DID MOUNT')
-    this.props.fetchTrains()
+    console.log('in component did mount')
+    this.props.fetchRedTrains()
   }
   render() {
-    const trains = this.props.trains
+    const trains = this.props.redTrains
     const date = new Date()
     const minutes = date.getMinutes()
     if (trains.length === 0) {
@@ -16,10 +16,10 @@ class AllTrains extends React.Component {
     }
     return (
       <div>
-        <h2 className="trainHeader">Chicago / Franklin</h2>
+        <h2 className="trainHeader">Chicago / State</h2>
         {trains.ctatt.eta.map((train, index) => (
-          <div key={index} className={train.rt === 'p' ? 'purple' : 'brown'}>
-            <h2>{train.rt === 'p' ? 'Purple Line' : 'Brown Line'}</h2>
+          <div key={index} className="red">
+            <h2>Red Line</h2>
 
             <h2>{train.destNm}</h2>
             <h3>
@@ -38,13 +38,13 @@ class AllTrains extends React.Component {
 
 const mapState = state => {
   return {
-    trains: state.trains
+    redTrains: state.redTrains
   }
 }
 
 const mapDispatch = dispatch => {
   return {
-    fetchTrains: () => dispatch(fetchTrains())
+    fetchRedTrains: () => dispatch(fetchRedTrains())
   }
 }
-export default connect(mapState, mapDispatch)(AllTrains)
+export default connect(mapState, mapDispatch)(RedTrains)

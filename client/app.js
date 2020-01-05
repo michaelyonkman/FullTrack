@@ -1,5 +1,5 @@
 import React from 'react'
-import {Root, AllTrains} from './components'
+import {Root, AllTrains, RedTrains} from './components'
 
 // import {Navbar} from './components'
 // import Routes from './routes'
@@ -9,6 +9,7 @@ const App = () => {
     <div>
       <Root />
       <AllTrains />
+      <RedTrains />
     </div>
   )
 }
