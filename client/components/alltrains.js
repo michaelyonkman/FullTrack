@@ -4,7 +4,6 @@ import {fetchTrains} from '../store/allTrains'
 
 class AllTrains extends React.Component {
   componentDidMount() {
-    console.log('IN COMPONENT DID MOUNT')
     this.props.fetchTrains()
   }
   render() {
@@ -16,18 +15,20 @@ class AllTrains extends React.Component {
     }
     return (
       <div>
-        <h2 className="trainHeader">Chicago / Franklin</h2>
+        <h2 className="trainHeader">Chicago & Franklin</h2>
         {trains.ctatt.eta.map((train, index) => (
           <div key={index} className={train.rt === 'p' ? 'purple' : 'brown'}>
             <h2>{train.rt === 'p' ? 'Purple Line' : 'Brown Line'}</h2>
 
             <h2>{train.destNm}</h2>
             <h3>
-              {train.arrT.slice(-5, -3) - minutes === 1
-                ? 'Due'
-                : train.arrT.slice(-5, -3) - minutes < 0
-                  ? train.arrT.slice(-5, -3) - minutes + 60 + ' minutes'
-                  : train.arrT.slice(-5, -3) - minutes + ' minutes'}
+              {train.arrT.slice(-5, -3) - minutes === 0
+                ? 'Departing'
+                : train.arrT.slice(-5, -3) - minutes === 1
+                  ? 'Due'
+                  : train.arrT.slice(-5, -3) - minutes < 0
+                    ? train.arrT.slice(-5, -3) - minutes + 60 + ' minutes'
+                    : train.arrT.slice(-5, -3) - minutes + ' minutes'}
             </h3>
           </div>
         ))}
