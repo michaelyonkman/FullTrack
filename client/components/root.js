@@ -6,7 +6,17 @@ const Root = () => {
   return (
     <div id="head">
       <nav>
-        <span className="faster">FullTrack</span>
+        <span>
+          <span id="faster">FullTrack</span>
+          <span className="links">
+            {' '}
+            <a href="/">Trains</a>
+          </span>
+          <span className="links">
+            <a href="/">Busses</a>
+          </span>
+        </span>
+
         <div>
           <WeatherData />
         </div>
