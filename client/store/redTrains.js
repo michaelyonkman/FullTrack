@@ -10,7 +10,7 @@ const setRedTrains = redTrains => {
 }
 
 const REDTRAINS_URL =
-  'http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=b6c386fa68f942d0b18d1c586e4126d7&mapid=41450&outputType=JSON'
+  '/api/1.0/ttarrivals.aspx?key=b6c386fa68f942d0b18d1c586e4126d7&mapid=41450&outputType=JSON'
 
 export const fetchRedTrains = () => {
   return async dispatch => {
