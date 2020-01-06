@@ -8,6 +8,7 @@ class AllTrains extends React.Component {
   }
   render() {
     const trains = this.props.trains
+    console.log(trains)
     const date = new Date()
     const minutes = date.getMinutes()
     if (trains.length === 0) {
@@ -17,8 +18,8 @@ class AllTrains extends React.Component {
       <div>
         <h2 className="trainHeader">Chicago & Franklin</h2>
         {trains.ctatt.eta.map((train, index) => (
-          <div key={index} className={train.rt === 'p' ? 'purple' : 'brown'}>
-            <h2>{train.rt === 'p' ? 'Purple Line' : 'Brown Line'}</h2>
+          <div key={index} className={train.rt === 'P' ? 'purple' : 'brown'}>
+            <h2>{train.rt === 'P' ? 'Purple Line' : 'Brown Line'}</h2>
 
             <h2>{train.destNm}</h2>
             <h3>
