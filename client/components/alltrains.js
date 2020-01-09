@@ -16,7 +16,10 @@ class AllTrains extends React.Component {
     }
     return (
       <div>
-        <h2 className="trainHeader">Chicago & Franklin</h2>
+        <div className="trainHeader">
+          <h2>Chicago & Franklin</h2>
+          <h3>Brown & Purple Line Trains</h3>
+        </div>
         {trains.ctatt.eta.map((train, index) => (
           <div key={index} className={train.rt === 'P' ? 'purple' : 'brown'}>
             <h2>{train.rt === 'P' ? 'Purple Line' : 'Brown Line'}</h2>

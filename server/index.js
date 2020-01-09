@@ -70,6 +70,10 @@ const createApp = () => {
     '/api',
     proxy({target: 'http://lapi.transitchicago.com', changeOrigin: true})
   )
+  app.use(
+    '/bustime',
+    proxy({target: 'http://ctabustracker.com', changeOrigin: true})
+  )
 
   // static file-serving middleware
   app.use(express.static(path.join(__dirname, '..', 'public')))

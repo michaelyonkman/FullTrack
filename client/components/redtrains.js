@@ -15,7 +15,10 @@ class RedTrains extends React.Component {
     }
     return (
       <div>
-        <h2 className="trainHeader">Chicago & State</h2>
+        <div className="trainHeader">
+          <h2>Chicago & State</h2>
+          <h3>Red Line Trains</h3>
+        </div>
         {trains.ctatt.eta.map((train, index) => (
           <div key={index} className="red">
             <h2>Red Line</h2>

@@ -5,8 +5,10 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import trainsReducer from './allTrains'
 import weatherReducer from './weatherData'
 import redTrainsReducer from './redTrains'
+import chicagoEbBussesReducer from './chicagoEbBusses'
 
 const reducer = combineReducers({
+  chicagoEbBusses: chicagoEbBussesReducer,
   redTrains: redTrainsReducer,
   trains: trainsReducer,
   weatherData: weatherReducer
