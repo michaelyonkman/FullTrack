@@ -6,9 +6,15 @@ import trainsReducer from './allTrains'
 import weatherReducer from './weatherData'
 import redTrainsReducer from './redTrains'
 import chicagoEbBussesReducer from './chicagoEbBusses'
+import chicagoWbBussesReducer from './chicagoWbBusses'
+import sedgwickEbBussesReducer from './sedgwickEbBusses'
+import sedgwickNbBussesReducer from './sedgwickNbBusses'
 
 const reducer = combineReducers({
+  sedgwickNbBusses: sedgwickNbBussesReducer,
+  sedgwickEbBusses: sedgwickEbBussesReducer,
   chicagoEbBusses: chicagoEbBussesReducer,
+  chicagoWbBusses: chicagoWbBussesReducer,
   redTrains: redTrainsReducer,
   trains: trainsReducer,
   weatherData: weatherReducer

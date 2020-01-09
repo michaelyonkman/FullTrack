@@ -8,7 +8,6 @@ class AllTrains extends React.Component {
   }
   render() {
     const trains = this.props.trains
-    console.log(trains)
     const date = new Date()
     const minutes = date.getMinutes()
     if (trains.length === 0) {
@@ -29,10 +28,10 @@ class AllTrains extends React.Component {
               {train.arrT.slice(-5, -3) - minutes === 0
                 ? 'Departing'
                 : train.arrT.slice(-5, -3) - minutes === 1
-                  ? 'Due'
-                  : train.arrT.slice(-5, -3) - minutes < 0
-                    ? train.arrT.slice(-5, -3) - minutes + 60 + ' minutes'
-                    : train.arrT.slice(-5, -3) - minutes + ' minutes'}
+                ? 'Due'
+                : train.arrT.slice(-5, -3) - minutes < 0
+                ? train.arrT.slice(-5, -3) - minutes + 60 + ' minutes'
+                : train.arrT.slice(-5, -3) - minutes + ' minutes'}
             </h3>
           </div>
         ))}

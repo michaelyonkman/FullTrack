@@ -1,25 +1,25 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchChicagoEbBusses} from '../store/chicagoEbBusses'
+import {fetchSedgwickNbBusses} from '../store/sedgwickNbBusses'
 
-class ChicagoEbBusses extends React.Component {
+class SedgwickNbBusses extends React.Component {
   componentDidMount() {
-    this.props.fetchChicagoEbBusses()
+    this.props.fetchSedgwickNbBusses()
   }
   render() {
-    const busses = this.props.chicagoEbBusses
+    const busses = this.props.sedgwickNbBusses
     if (busses.length === 0) {
       return <h1>Loading...</h1>
     }
     return (
       <div>
         <div className="trainHeader">
-          <h2>Chicago & Franklin</h2>
-          <h3>66 Chicago Eastbound Busses</h3>
+          <h2>Orleans & Huron</h2>
+          <h3>37 Sedgwick Northbound Busses</h3>
         </div>
         {busses['bustime-response'].prd.map((bus, index) => (
           <div key={index} className="bus">
-            <h2>66 Chicago</h2>
+            <h2>37 Sedgwick</h2>
             <h2>{bus.des}</h2>
             <h3>{bus.prdctdn === 'DUE' ? 'due' : bus.prdctdn + ' minutes'}</h3>
           </div>
@@ -31,13 +31,13 @@ class ChicagoEbBusses extends React.Component {
 
 const mapState = state => {
   return {
-    chicagoEbBusses: state.chicagoEbBusses
+    sedgwickNbBusses: state.sedgwickNbBusses
   }
 }
 
 const mapDispatch = dispatch => {
   return {
-    fetchChicagoEbBusses: () => dispatch(fetchChicagoEbBusses())
+    fetchSedgwickNbBusses: () => dispatch(fetchSedgwickNbBusses())
   }
 }
-export default connect(mapState, mapDispatch)(ChicagoEbBusses)
+export default connect(mapState, mapDispatch)(SedgwickNbBusses)
