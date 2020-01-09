@@ -16,6 +16,7 @@ export const fetchSedgwickNbBusses = () => {
   return async dispatch => {
     try {
       const response = await axios.get(SEDGWICK_NB_BUSSES_URL)
+      console.log(response.data)
       dispatch(setSedgwickNbBusses(response.data))
     } catch (err) {
       console.log(err)

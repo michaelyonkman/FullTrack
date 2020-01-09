@@ -1,19 +1,29 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 import WeatherData from './weatherdata'
+import {
+  AllTrains,
+  RedTrains,
+  ChicagoEbBusses,
+  ChicagoWbBusses,
+  SedgwickEbBusses,
+  SedgwickNbBusses
+} from './index'
 
 const Root = () => {
   return (
     <div id="head">
       <nav>
         <span>
-          <span id="faster">FullTrack</span>
-          <span className="links">
-            {' '}
-            <a href="/">Trains</a>
+          <span id="faster">
+            <a href="/">FullTrack</a>
           </span>
           <span className="links">
-            <a href="/">Busses</a>
+            {' '}
+            <a href="/trains">Trains</a>
+          </span>
+          <span className="links">
+            <a href="/busses">Busses</a>
           </span>
         </span>
 
@@ -28,10 +38,42 @@ const Root = () => {
         <div id="desc">
           Your complete source for Fullstack Academy transit tracking!
         </div>
-        {/* <Switch>
-          <Route path="/:candyId" component={SingleCandy} />
-          <Route path="/" component={AllCandies} />
-        </Switch> */}
+
+        <Switch>
+          <Route
+            path="/trains"
+            render={props => (
+              <div>
+                <AllTrains />
+                <RedTrains />
+              </div>
+            )}
+          />
+          <Route
+            path="/busses"
+            render={props => (
+              <div>
+                <ChicagoEbBusses />
+                <ChicagoWbBusses />
+                <SedgwickEbBusses />
+                <SedgwickNbBusses />
+              </div>
+            )}
+          />
+          <Route
+            path="/"
+            render={props => (
+              <div>
+                <AllTrains />
+                <RedTrains />
+                <ChicagoEbBusses />
+                <ChicagoWbBusses />
+                <SedgwickEbBusses />
+                <SedgwickNbBusses />
+              </div>
+            )}
+          />
+        </Switch>
       </main>
     </div>
   )

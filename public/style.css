@@ -10,14 +10,14 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: red;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
 }
-
-/* nav span {
-  font-size: 1.5em;
-} */
 
 nav div {
   padding-left: 10px;
@@ -31,6 +31,7 @@ nav div {
   padding-left: 5px;
   text-shadow: -1px -1px 0 black, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  font-family: 'Bungee Shade', cursive;
 }
 
 .purple {
@@ -40,6 +41,7 @@ nav div {
   padding-left: 5px;
   text-shadow: -1px -1px 0 black, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  font-family: 'Bungee Shade', cursive;
 }
 
 .red {
@@ -49,6 +51,7 @@ nav div {
   padding-left: 5px;
   text-shadow: -1px -1px 0 black, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  font-family: 'Bungee Shade', cursive;
 }
 
 .bus {
@@ -58,6 +61,7 @@ nav div {
   padding-left: 5px;
   text-shadow: -1px -1px 0 black, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  font-family: 'Bungee Shade', cursive;
 }
 
 #head {
@@ -99,7 +103,7 @@ span {
 
 #faster {
   font-family: 'Faster One', cursive;
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-decoration: none;
 }
 
@@ -112,7 +116,7 @@ span {
   border: outset purple;
   box-shadow: 5px 10px;
   padding-left: 10px;
-  background-color: white;
+  background-color: lightgrey;
 }
 
 .trainHeader h2 {
@@ -120,10 +124,15 @@ span {
 }
 
 .links {
-  font-family: 'Bungee Inline', cursive;
+  font-family: 'Faster One', cursive;
+  font-size: 1.5em;
   color: yellow;
   text-shadow: -2px -2px 0 purple, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   padding-left: 10px;
-  padding-top: 7px;
+  padding-top: 10px;
+}
+
+.links a {
+  color: white;
 }

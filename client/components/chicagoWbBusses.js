@@ -21,7 +21,13 @@ class ChicagoWbBusses extends React.Component {
           <div key={index} className="bus">
             <h2>66 Chicago</h2>
             <h2>{bus.des}</h2>
-            <h3>{bus.prdctdn === 'DUE' ? 'due' : bus.prdctdn + ' minutes'}</h3>
+            <h3>
+              {bus.prdctdn === 'DUE'
+                ? 'due'
+                : bus.prdctdn === 'DLY'
+                ? 'Delayed'
+                : bus.prdctdn + ' minutes'}
+            </h3>
           </div>
         ))}
       </div>
