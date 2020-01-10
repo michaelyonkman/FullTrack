@@ -86,6 +86,7 @@ span {
     1px 1px 0 #000;
   padding-left: 5px;
   color: yellow;
+  margin-bottom: 20px;
 }
 
 .weatherData {
