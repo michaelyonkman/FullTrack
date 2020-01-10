@@ -6,6 +6,7 @@ class SedgwickEbBusses extends React.Component {
   componentDidMount() {
     this.props.fetchSedgwickEbBusses()
   }
+
   render() {
     const busses = this.props.sedgwickEbBusses
     if (busses.length === 0) {
@@ -17,19 +18,25 @@ class SedgwickEbBusses extends React.Component {
           <h2>Chicago & Franklin</h2>
           <h3>37 Sedgwick Eastbound Busses</h3>
         </div>
-        {busses['bustime-response'].prd.map((bus, index) => (
-          <div key={index} className="bus">
-            <h2>37 Sedgwick</h2>
-            <h2>{bus.des}</h2>
-            <h3>
-              {bus.prdctdn === 'DUE'
-                ? 'due'
-                : bus.prdctdn === 'DLY'
-                ? 'Delayed'
-                : bus.prdctdn + ' minutes'}
-            </h3>
+        {busses['bustime-response'].prd ? (
+          busses['bustime-response'].prd.map((bus, index) => (
+            <div key={index} className="bus">
+              <h2>37 Sedgwick</h2>
+              <h2>{bus.des}</h2>
+              <h3>
+                {bus.prdctdn === 'DUE'
+                  ? 'due'
+                  : bus.prdctdn === 'DLY'
+                  ? 'Delayed'
+                  : bus.prdctdn + ' minutes'}
+              </h3>
+            </div>
+          ))
+        ) : (
+          <div className="bus" id="noBusses">
+            No Busses
           </div>
-        ))}
+        )}
       </div>
     )
   }
