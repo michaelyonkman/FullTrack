@@ -1,6 +1,7 @@
-#FullTrack
+# Ahoy!
 
 A single page transit tracker application built with React!
 
 ![](FullTrackGIF.gif)
+
 
